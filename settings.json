@@ -1,0 +1,37 @@
+{
+"vim.useSystemClipboard": true,
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.useCtrlKeys": true,
+    "vim.visualstar": true,
+    "vim.hlsearch": true,
+    "vim.easymotionMarkerForegroundColorOneChar": "rgba(0,240,170,0.9)", //一文字目の色
+    "vim.easymotionMarkerBackgroundColor": "", //背景色
+    "vim.easymotionMarkerFontWeight": "normal", //フォントの太さ
+    "vim.easymotionKeys": "asdfhjklwqeruioopghty;", //マーカーに使用される文字列
+    "vim.normalModeKeyBindings": [
+        { "before": ["J"], "after": ["1", "0", "j"] }, //移動を早める
+        { "before": ["K"], "after": ["1", "0", "k"] }, //移動を早める
+        { "before": ["H"], "after": ["^"] }, //端に移動
+        { "before": ["L"], "after": ["$"] }, //端に移動
+        { "before": ["u"], "commands": [{ "command": "undo" }] }, //undo
+        { "before": ["<C-r>"], "commands": [{ "command": "redo" }] }, //redo
+        { "before": ["<Leader>", "c"], "commands": [{"command": "editor.action.commentLine"}]},
+        { "before": ["<Leader>", "w"], "after": [], "commands": [{ "command": "workbench.action.files.save", "args": []}]},
+        { "before": ["<Leader>", "q"], "after": [], "commands": [{ "command": "workbench.action.closeActiveEditor"}]},
+        { "before": ["<Leader>", "x"], "after": [], "commands": [{ "command": "workbench.action.formatDocument", "args": []}]},
+        { "before": ["f"], "after": ["<Leader>", "<Leader>", "2", "s"] }
+    ],
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "j"],
+            "after": ["<Esc>"]
+        },
+        { "before": ["<C-j"], "after": ["<Down>"]},
+        { "before": ["<C-k"], "after": ["<Up"]},
+        { "before": [";", ";"], "commands": ["editor.action.triggerSuggest"]}
+    ],
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "rgba(0, 10, 200, 0.5)"
+}
